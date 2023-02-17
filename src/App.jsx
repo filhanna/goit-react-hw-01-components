@@ -1,12 +1,16 @@
 import { Profile } from "./components/profile/Profile";
-import user from './data/user.json';
-import data from './data/data.json'
-import friends from './data/friends.json'
+import transactions from './data/transactions.json'
 import { Statistics } from "components/statistics/Statistics";
 import { FriendList } from "components/friendList/FriendList";
+import { TransactionHistory } from './components/transaction/TransactionHistory'
+import user from './data/user.json';
+import data from './data/data.json';
+import friends from './data/friends.json';
+import { GlobalStyle } from "./components/style/GlobalStyle";
+import { Layaout } from "components/style/Layout";
 export const App = () => {
   return (
-    <div>
+    <Layaout>
 <Profile
   username={user.username}
   tag={user.tag}
@@ -18,8 +22,9 @@ export const App = () => {
         likes={user.stats.likes}
       />
       <Statistics title="Upload stats" stats={data} />
-      <FriendList friends={friends}/>
-
-    </div>
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
+      <GlobalStyle />
+    </Layaout>
   );
 };
