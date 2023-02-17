@@ -5,6 +5,7 @@ export const ProfileContainer = styled.div`
   background-color: white;
   border-radius: 10px;
   border: 1px solid grey;
+  margin-bottom: 69px;
 `;
 
 export const ProfileDescription = styled.div`
