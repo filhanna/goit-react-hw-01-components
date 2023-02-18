@@ -7,10 +7,10 @@ function randomHexColor() {
 
 export const Statistics = props => {
   const { title, stats } = props;
-  const empty = true;
+  // const empty = true;
   return (
     <section className={css.statistics}>
-      <h2 className={css.title}>{empty && title}</h2>
+      {title && <h2 className={css.title}>{title}</h2>}
 
       <ul className={css.statList}>
         {stats.map(({ id, label, percentage }) => {
